@@ -2,7 +2,7 @@
 """
 Created on Thu Jan 16 10:41:50 2020
 
-@author: Laguema
+@author: Marc Bresse
 """
 
 import pandas as pd
@@ -30,7 +30,7 @@ def FXMatrix(FXDict):
                 LastIteration=FXDict.copy()
     
                 
-                while len(curPool.keys())>1:
+                while len(curPool.keys())>0:
                     
                     #We start by looking for the currency we want to get to (the base)
                     lookfor=curto
@@ -79,3 +79,6 @@ def FXMatrix(FXDict):
                     break
                     
     return FX
+
+#Example
+print(FXMatrix({'CADUSD':1.3,'BRLUSD':4.3,'BRLPLN':1.1}))
